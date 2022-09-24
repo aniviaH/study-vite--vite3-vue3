@@ -7,6 +7,8 @@ export default defineComponent({
     const onClick = () => {
       counter.value++
     }
+
+    // 返回render函数
     return () => (
       <>
         <div>comp-jsx--444</div>

@@ -4,6 +4,7 @@ import { reactive, ref } from 'vue'
 // 直接导入组件
 import Comp from 'comps/Comp.vue'
 import CompJsx from 'comps/Comp-Jsx.vue';
+import CompMock from 'comps/Comp-mock.vue'
 
 // 属性定义
 const props = defineProps({
@@ -59,6 +60,7 @@ defineExpose({
 
   <comp></comp>
   <comp-jsx></comp-jsx>
+  <comp-mock></comp-mock>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
