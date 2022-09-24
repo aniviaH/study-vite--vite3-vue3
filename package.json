@@ -5,8 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-cross-env": "cross-env NODE_ENV_MY=development vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test-cross-env": "cross-env FIRST_ENV=one SECOND_ENV=\\\"module\\\" vite",
+    "parentScript": "cross-env GREET=\"Joe\" npm run childScript",
+    "childScript": "cross-env-shell \"echo Hello $GREET\"",
+    "test": "cross-env TS_NODE_COMPILER_OPTIONS={\\\"module\\\":\\\"commonjs\\\"} node some_file.test.ts"
   },
   "dependencies": {
     "mockjs": "^1.1.0",
@@ -15,6 +20,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "cross-env": "^7.0.3",
     "sass": "^1.54.9",
     "stylus": "^0.59.0",
     "vite": "^3.1.0",

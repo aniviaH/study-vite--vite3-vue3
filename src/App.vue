@@ -22,6 +22,8 @@ onMounted(() => {
   console.log('refHelloworld.value.praviteData---', refHelloworld.value.praviateData );
 })
 
+// console.log('env---', process.env)
+
 </script>
 
 <template>
