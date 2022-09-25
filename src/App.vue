@@ -1,28 +1,14 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { reactive, ref, onMounted } from 'vue';
-import HelloWorld from 'comps/HelloWorld.vue'
+// import HelloWorld from 'comps/HelloWorld.vue'
 
-const refHelloworld = ref()
-
-const onMyClick = (payload) => {
-  console.log('onMyClick---', payload);
+import {useStore} from 'vuex'
+const store = useStore()
+const onAdd = () => {
+  // store.dispatch('add')
+  store.commit('add')
 }
-const onSubmit = (payload) => {
-  console.log('onSubmit---', payload)
-}
-
-onMounted(() => {
-  // https://vuejs.org/api/sfc-script-setup.html#defineexpose
-  // https://vuejs.org/guide/essentials/template-refs.html#ref-on-component
-  // 通过ref访问子组件实例，子组件script setup里面的数据都不能访问到，除非子组件expose的数据
-  console.log('refHelloworld.value---', refHelloworld.value, );
-  console.log('refHelloworld.value.publicData---', refHelloworld.value.publicData );
-  console.log('refHelloworld.value.praviteData---', refHelloworld.value.praviateData );
-})
-
-// console.log('env---', process.env)
 
 </script>
 
@@ -35,7 +21,19 @@ onMounted(() => {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" @myClick="onMyClick" @submit="onSubmit" ref="refHelloworld" />
+
+  <router-view></router-view>
+
+  <div>
+    <router-link to="/">去到路由首页</router-link>
+    <br>
+    <router-link to="/about">去到about页面</router-link>
+  </div>
+  <div>
+    store:
+    <!-- <button @click="onAdd">{{store.state.counter}}</button> -->
+    <button @click="() => $store.commit('add')">{{store.state.counter}}</button>
+  </div>
 </template>
 
 <style scoped>
