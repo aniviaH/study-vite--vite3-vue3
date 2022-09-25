@@ -22,6 +22,19 @@ const onAdd = () => {
     </a>
   </div>
 
+  <p>
+    Check out
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
+      >create-vue</a
+    >, the official Vue + Vite starter
+  </p>
+  <p>
+    Install
+    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    in your IDE for a better DX
+  </p>
+  <p class="tip">Click on the Vite and Vue logos to learn more</p>
+
   <router-view></router-view>
 
   <div>
@@ -36,16 +49,28 @@ const onAdd = () => {
   </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<!-- 使用vite-config中的配置值 css.preprocessorOptions. -->
+<style scoped lang="sass">
+.tip
+  color: $injectedColor // red
+  
+</style>
+
+<style lang="scss">
+  .tip {
+    color: $injectedColor;
+  }
+</style>
+
+<style scoped lang="styl">
+  .tip {
+    color: $injectedColor;
+  }
+</style>
+
+<style lang="scss">
+  @import './styles/mixin.scss';
+  body {
+    @include scrollbar;
+  }
 </style>

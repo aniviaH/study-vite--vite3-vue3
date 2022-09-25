@@ -18,19 +18,23 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
       'comps': path.resolve(__dirname, 'src/components'),
+      'apis': path.resolve(__dirname, 'src/apis'),
       'views': path.resolve(__dirname, 'src/views'),
+      'utils': path.resolve(__dirname, 'src/utils'),
+      'router': path.resolve(__dirname, 'src/router'),
+      'styles': path.resolve(__dirname, 'src/styles'),
     }
   },
   css: {
     preprocessorOptions: {
-      scss: {
+      sass: {
         additionalData: `$injectedColor: red`
       },
-      sass: {
-        additionalData: `$injectedColor: yellow`
+      scss: {
+        additionalData: `$injectedColor: yellow;`
       },
       styl: {
-        additionalData: `$injectedColor ?= orange`
+        additionalData: `$injectedColor ?= blue;`
       }
     }
   },

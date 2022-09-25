@@ -56,7 +56,7 @@ defineExpose({
 </script>
 
 <template>
-  <h1>{{ msg }} iiiiiiiiiiiiiiiiiiiiiiiii</h1>
+  <h1>{{ msg }}</h1>
 
   <comp></comp>
   <comp-jsx></comp-jsx>
@@ -71,36 +71,6 @@ defineExpose({
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="docs">Click on the Vite and Vue logos to learn more</p>
+  
 </template>
 
-<style scoped lang="sass">
-.docs
-  color: $injectedColor
-  
-</style>
-
-<!-- <style lang="scss">
-.docs {
-  color: $injectedColor;
-}
-</style> -->
-
-<style scoped lang="styl">
-  .docs {
-    /* color: #888; */
-    color: $injectedColor;
-  }
-</style>
