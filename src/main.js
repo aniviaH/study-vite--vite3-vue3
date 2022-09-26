@@ -10,4 +10,12 @@ import store from '@/store'
 // 全局样式
 import 'styles/index.scss'
 
-createApp(App).use(router).use(store).mount('#app')
+// 全局引入ElementPlus
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+createApp(App)
+  .use(router)
+  .use(store)
+  .use(ElementPlus)
+  .mount('#app')

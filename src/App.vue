@@ -47,6 +47,17 @@ const onAdd = () => {
     <!-- <button @click="onAdd">{{store.state.counter}}</button> -->
     <button @click="() => $store.commit('add')">{{store.state.counter}}</button>
   </div>
+
+  <div>
+    <el-row class="mb-4">
+    <el-button>Default</el-button>
+    <el-button type="primary">Primary</el-button>
+    <el-button type="success">Success</el-button>
+    <el-button type="info">Info</el-button>
+    <el-button type="warning">Warning</el-button>
+    <el-button type="danger">Danger</el-button>
+  </el-row>
+  </div>
 </template>
 
 <!-- 使用vite-config中的配置值 css.preprocessorOptions. -->
