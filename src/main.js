@@ -16,5 +16,5 @@ import ElementPlus from 'plugins/element-plus'
 createApp(App)
   .use(router)
   .use(store)
-  // .use(ElementPlus)
+  .use(ElementPlus)
   .mount('#app')

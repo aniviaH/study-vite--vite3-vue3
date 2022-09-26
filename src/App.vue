@@ -3,13 +3,16 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from 'comps/HelloWorld.vue'
 
+import {ref} from 'vue'
 import {useStore} from 'vuex'
+
 const store = useStore()
 const onAdd = () => {
   // store.dispatch('add')
   store.commit('add')
 }
 
+const input = ref('')
 </script>
 
 <template>
@@ -49,14 +52,14 @@ const onAdd = () => {
   </div>
 
   <div>
-    <el-row class="mb-4">
     <el-button>Default</el-button>
     <el-button type="primary">Primary</el-button>
     <el-button type="success">Success</el-button>
     <el-button type="info">Info</el-button>
     <el-button type="warning">Warning</el-button>
     <el-button type="danger">Danger</el-button>
-  </el-row>
+
+    <el-input v-model="input" placeholder="Please input" />
   </div>
 </template>
 
