@@ -29,19 +29,28 @@
 
 @import './mixin.scss';
 
-// body {
-//   @include scrollbar;
-// }
+
+html, body {
+  height: 100%;
+  overflow: auto;
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include scrollbar;
+}
 
 #app {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  // margin-top: 60px;
 
+  width: 100%;
   height: 1000px;
   
-
   a {
     color: #42b983;
   }

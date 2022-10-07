@@ -16,16 +16,16 @@ const input = ref('')
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-  </div>
+  </div> -->
 
-  <p>
+  <!-- <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
       >create-vue</a
@@ -36,22 +36,22 @@ const input = ref('')
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
     in your IDE for a better DX
   </p>
-  <p class="tip">Click on the Vite and Vue logos to learn more</p>
+  <p class="tip">Click on the Vite and Vue logos to learn more</p> -->
 
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
 
-  <div>
+  <!-- <div>
     <router-link to="/">去到路由首页</router-link>
     <br>
     <router-link to="/about">去到about页面</router-link>
-  </div>
+  </div> -->
   <div>
-    store:
+    <!-- store: -->
     <!-- <button @click="onAdd">{{store.state.counter}}</button> -->
-    <button @click="() => $store.commit('add')">{{store.state.counter}}</button>
+    <!-- <button @click="() => $store.commit('add')">{{store.state.counter}}</button> -->
   </div>
 
-  <div>
+  <!-- <div>
     <el-button>Default</el-button>
     <el-button type="primary">Primary</el-button>
     <el-button type="success">Success</el-button>
@@ -60,7 +60,10 @@ const input = ref('')
     <el-button type="danger">Danger</el-button>
 
     <el-input v-model="input" placeholder="Please input" />
-  </div>
+  </div> -->
+
+  <router-view></router-view>
+  <!-- <img src="/vite.svg" class="logo" alt="Vite logo" /> -->
 </template>
 
 <!-- 使用vite-config中的配置值 css.preprocessorOptions. -->
@@ -79,12 +82,5 @@ const input = ref('')
 <style scoped lang="styl">
   .tip {
     color: $injectedColor;
-  }
-</style>
-
-<style lang="scss">
-  @import './styles/mixin.scss';
-  body {
-    @include scrollbar;
   }
 </style>
