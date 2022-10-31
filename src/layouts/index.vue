@@ -1,7 +1,8 @@
 <template>
   <div class="app-wrapper">
     <!-- 侧边栏 -->
-    <div class="sidebar-container">侧边栏...</div>
+    <!-- <div class="sidebar-container">侧边栏...</div> -->
+    <siderbar class="sidebar-container"></siderbar>
     <!-- 右侧内容区 -->
     <div class="main-container">
       <nav-bar></nav-bar>
@@ -14,6 +15,7 @@
 <script setup>
 import NavBar from '@/layouts/components/NavBar.vue'
 import AppMain from '@/layouts/components/AppMain.vue'
+import Siderbar from '@/layouts/components/sidebar/index.vue'
 
 </script>
 
