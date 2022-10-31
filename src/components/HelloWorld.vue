@@ -6,6 +6,8 @@ import Comp from 'comps/Comp.vue'
 import CompJsx from 'comps/Comp-Jsx.vue';
 import CompMock from 'comps/Comp-mock.vue'
 
+import request from 'utils/request'
+
 // 属性定义
 const props = defineProps({
   msg: String
@@ -53,6 +55,18 @@ defineExpose({
   count,
   publicData,
 })
+
+// test service
+;(async () => {
+  try {
+    const users = await request('/api/users')
+    // const users = await request('/api/50008')
+    // const users = await request('/api/404')
+    console.log(users)
+  } catch (err) {
+    console.log(err)
+  }
+})()
 </script>
 
 <template>
