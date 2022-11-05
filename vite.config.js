@@ -40,7 +40,14 @@ export default defineConfig({
     }
   },
   plugins: [
-    vue(),
+    vue({
+      // template: {
+			// 	compilerOptions: {
+			// 		/* https://github.com/vitejs/vite/tree/main/packages/plugin-vue#options */
+			// 		isCustomElement: tag => tag === 'com-detail',
+			// 	},
+			// },
+    }),
     // https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx
     vueJsx(),
     viteMockServe ({
